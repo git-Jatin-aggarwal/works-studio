@@ -3,7 +3,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-// var tl = gsap.timeline()
+var tl = gsap.timeline()
 
 // tl.to("#yellow1",{
 //     top:"-100%",
@@ -12,45 +12,27 @@ const scroll = new LocomotiveScroll({
 //     ease:"expo.out"
 // })
 
-gsap.to("#yellow1",{
+tl.to("#yellow1",{
     top:"-100%",
     delay: 0.5,
     duration: 0.5,
     ease:"expo.out"
 })
-gsap.from("#yellow2",{
+tl.from("#yellow2",{
     top:"100%",
     delay: 1.5,
     duration: 0.5,
     ease:"expo.out"
-})
-gsap.to("#new-loader",{
-    top:"-100%",
-    delay: 1.5,
+},"anim")
+
+
+tl.to("#new-loader h1",{
+    delay:1.5,
     duration: 0.5,
-    // ease:"expo.out"
+
+    color:"black"
+},"anim")
+
+tl.to("#new-loader",{
+    display:"none" 
 })
-
-
-// tl.from("#yellow2",{
-//     top:"100%",
-//     delay: 0.5,
-//     duration: 0.5,
-//     ease:"expo.out"
-// },"anim")
-
-// tl.to("#loader h1",{
-//     duration: 0.5,
-//     delay:0.5,
-//     color:"black" 
-// },"anim")
-// gsap.to("#new-loader h1",{
-//     top:"-100%",
-//     duration: 5,
-//     delay:0.5,
-//     color:"black" 
-// })
-
-// tl.to("#loader",{
-//     display:"none" 
-// })
